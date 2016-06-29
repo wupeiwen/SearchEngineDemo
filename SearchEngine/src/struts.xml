@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="searchengine" extends="struts-default" namespace="/">
+		<action name="spider" class="com.searchengine.action.SpiderAction" method="spider">
+		<result name="success">spider.jsp</result>
+		<result name="input">spider.jsp</result>
+		</action>
+		<action name="search" class="com.searchengine.action.SearchAction" method="search">
+		<result name="success">result.jsp</result>
+		<result name="input">index.jsp</result>
+		</action>
+		
+	</package>
+</struts>
